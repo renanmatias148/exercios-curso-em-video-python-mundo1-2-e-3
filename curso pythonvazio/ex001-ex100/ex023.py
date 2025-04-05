@@ -1,0 +1,6 @@
+num=int(input("informe um numero: "))
+print('analisando o numero {}...'.format(num))
+print("unidade: {}".format((num // 1 % 10 )))
+print("dezena: {}".format((num // 10 % 10)))
+print("centena: {}".format((num // 100 % 10)))
+print("milhar: {}".format((num // 1000 % 10)))
