@@ -1,11 +1,24 @@
-import random
-lista=[1,2,3,4,5,6,7,8,9,10]
-def numero6():
+from time import sleep
+
+def maior(* núm):
+    cont=maior=0
+    print("=-"*30)
     print("Analisando os valores passados...")
-    n1=random.sample(lista,6)
-    print(f"{n1} foram informados {len(n1)} valores ao todo.")
-    maior=max()
-    print(f"o maior valor informa foi {max(n1)}")
-    print("-="*30)
-    return max
-numero6(6)
+    for valor in núm:
+        print(f'{valor}', end='',flush=True)
+        sleep(0.3)
+        if cont ==0:
+            maior=valor
+        else:
+            if valor> maior:
+                maior = valor
+        cont += 1
+    print(f"Foram informados {cont} valores ao todo.")
+    print(f"O maior valor informado foi {maior}.")
+
+#PROGRAMA PRINCIPAL
+maior(2,9,4,5,7,1)
+maior(4,7,8)
+maior(1,2)
+maior(6)
+maior()
